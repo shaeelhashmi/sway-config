@@ -7,3 +7,5 @@
 # Explicitly allow tracking these config folders
 !sway/
 !waybar/
+!sway/**
+!waybar/**

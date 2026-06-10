@@ -1,0 +1,9 @@
+# Ignore everything in the directory
+*
+
+# But do NOT ignore the .gitignore file itself
+!.gitignore
+
+# Explicitly allow tracking these config folders
+!sway/
+!waybar/

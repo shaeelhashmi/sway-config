@@ -7,6 +7,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
+
 set $mod Mod4
 gaps inner 10
 gaps outer 5
@@ -19,12 +20,16 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu wmenu-run
-
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
 output * bg /home/shaeel/Pictures/wallpapers/volcano.jpg fill
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT
+exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY DISPLAY
+exec dbus-update-activation-environment --systemd SWAYSOCK WAYLAND_DISPLAY DISPLAY
+set $ELECTRON_OZONE_PLATFORM_HINT auto
 #
 # Example configuration:
 #
@@ -112,6 +117,8 @@ output * bg /home/shaeel/Pictures/wallpapers/volcano.jpg fill
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+    #search bar
+   			
 #
 # Workspaces:
 #
@@ -200,6 +207,8 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+     #search bar
+bindsym $mod+shift+Return exec wofi --show drun
 #
 # Utilities:
 #
@@ -218,10 +227,13 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-   swaybar_command waybar	
-   
-}
 
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+xwayland enabled
 include /usr/local/etc/sway/config.d/*
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+xwayland enable
+exec /bin/sh -c 'while [ ! -S "$SWAYSOCK" ]; do sleep 0.1; done; waybar'
+
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+

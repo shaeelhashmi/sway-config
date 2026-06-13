@@ -5,8 +5,7 @@
 }
 #clock {
     background-color: transparent;
-    margin-right: 15px; /* FORCE right side spacing */
-    margin-left: 15px; /* FORCE left side spacing */
+
     padding: 1px 1px;
     color: #ffffff;
 }
@@ -157,7 +156,15 @@ button:hover {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+#custom-power {
+    color: #ffffff;
+    padding: 0 10px;
+    margin: 4px 4px;
+    border-radius: 8px;
+    margin-right: 15px; /* FORCE right side spacing */
 
+    margin-left: 15px; /* FORCE left side spacing */
+}
 #power-profiles-daemon {
     padding-right: 15px;
 }

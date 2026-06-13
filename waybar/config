@@ -30,9 +30,9 @@
         //"sway/language",
         "battery",
         //"battery#bat2",
-        "clock"
+        "clock",
         //"tray"
-        //"custom/power"
+        "custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {

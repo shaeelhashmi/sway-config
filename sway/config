@@ -247,3 +247,5 @@ exec /bin/sh -c 'while [ ! -S "$SWAYSOCK" ]; do sleep 0.1; done; waybar'
 
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 
+# Transparency for all windows
+for_window [app_id=".*"] opacity 0.9

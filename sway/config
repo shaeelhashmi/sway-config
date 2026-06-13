@@ -23,7 +23,7 @@ set $term foot
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-output * bg /home/shaeel/Pictures/wallpapers/volcano.jpg fill
+output * bg /home/shaeel/Pictures/wallpapers/viper.png fill
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT

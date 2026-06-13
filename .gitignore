@@ -9,3 +9,5 @@
 !waybar/
 !sway/**
 !waybar/**
+!swaync/
+!swaync/**

@@ -23,8 +23,10 @@
         "network",
         "power-profiles-daemon",
         "cpu",
+        "custom/gpu0",
+        "custom/gpu1",
         //"memory",
-        //"temperature",
+        "temperature",
         //"backlight",
         //"keyboard-state",
         //"sway/language",
@@ -51,6 +53,18 @@
     //         "default": ""
     //     }
     // },
+"custom/gpu0": {
+    "exec": "radeontop -d - -l 1 2>/dev/null | grep -oP '(?<=gpu )\\d+\\.\\d+' | awk '{printf \"%d%%\", $1}'",
+    "format": "AMD {}  ",
+    "interval": 3,
+    "tooltip": false
+},
+"custom/gpu1": {
+    "exec": "timeout 2 intel_gpu_top -s 1000 2>/dev/null | awk 'NR==3{printf \"%d%%\", $9}'",
+    "format": "Intel {}  ",
+    "interval": 3,
+    "tooltip": false
+},
 "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -198,6 +212,7 @@
         },
         "on-click": "pavucontrol"
     },
+    
     "custom/media": {
         "format": "{icon} {text}",
         "return-type": "json",

@@ -23,7 +23,7 @@ set $term foot
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-output * bg /home/shaeel/Pictures/wallpapers/viper.png fill
+output * bg /home/shaeel/Pictures/wallpapers/viper.jpg fill
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT
@@ -251,4 +251,4 @@ exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 for_window [app_id=".*"] opacity 0.9
 # Increase/ Decrease transparency
 bindsym $mod+equal exec swaymsg opacity plus 0.05
-bindsym $mod+shift+equal exec swaymsg opacity minus 0.05cd
+bindsym $mod+shift+equal exec swaymsg opacity minus 0.05

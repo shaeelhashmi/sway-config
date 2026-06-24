@@ -9,6 +9,21 @@
     padding: 1px 1px;
     color: #ffffff;
 }
+#custom-gpu0 {
+    background-color: rgba(237, 28, 36, 0.75); /* AMD red */
+    color: #ffffff;
+    margin: 5px 0;
+    padding: 1px 1px;
+    border-radius: 3px;
+}
+
+#custom-gpu1 {
+    background-color: rgba(0, 113, 197, 0.75); /* Intel blue */
+    color: #ffffff;
+    margin: 5px 0;
+    padding: 1px 1px;
+    border-radius: 3px;
+}
 window#waybar {
     /* background-color: rgb(0, 5, 34);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5); */

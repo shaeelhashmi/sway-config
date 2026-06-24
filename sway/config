@@ -29,6 +29,7 @@ exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT
 exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY DISPLAY
 exec dbus-update-activation-environment --systemd SWAYSOCK WAYLAND_DISPLAY DISPLAY
+exec dbus-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec_always swaync
 bindsym $mod+n exec swaync-client -t
 set $ELECTRON_OZONE_PLATFORM_HINT auto

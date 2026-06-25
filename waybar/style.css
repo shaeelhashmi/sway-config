@@ -48,7 +48,21 @@ window#waybar.solo {
     background-color: #FFFFFF;
 }
 */
+#bluetooth {
+    color: #89b4fa;
+    background-color: #313244;
+    border-radius: 8px;
+    padding: 0 8px;
+    margin: 4px 2px;
+}
 
+#bluetooth.connected {
+    color: #a6e3a1;
+}
+
+#bluetooth.disabled {
+    color: #f38ba8;
+}
 window#waybar.termite {
     background-color: #3F3F3F;
 }

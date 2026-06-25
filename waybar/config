@@ -19,6 +19,7 @@
     "modules-right": [
         // "mpd",
         //"idle_inhibitor",
+        "bluetooth",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
@@ -53,6 +54,17 @@
     //         "default": ""
     //     }
     // },
+"bluetooth": {
+      "format": "  {status}",
+    "format-connected": "  {device_alias}",
+    "format-connected-battery": "  {device_alias} {device_battery_percentage}%",
+    "format-disabled": "  off",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager",
+    "on-click-right": "bluetoothctl power off"
+},
 "custom/gpu0": {
     "exec": "radeontop -d - -l 1 2>/dev/null | grep -oP '(?<=gpu )\\d+\\.\\d+' | awk '{printf \"%d%%\", $1}'",
     "format": "AMD {}  ",
@@ -182,15 +194,15 @@
         "power-saver": ""
       }
     },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
+   "network": {
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "on-click": "/home/shaeel/.local/bin/networkmanager_dmenu"
+},
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",

@@ -253,3 +253,4 @@ for_window [app_id=".*"] opacity 0.9
 # Increase/ Decrease transparency
 bindsym $mod+equal exec swaymsg opacity plus 0.05
 bindsym $mod+shift+equal exec swaymsg opacity minus 0.05
+exec blueman-applet

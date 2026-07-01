@@ -28,6 +28,7 @@
         "custom/gpu1",
         //"memory",
         "temperature",
+        "temperature#gpu",
         //"backlight",
         //"keyboard-state",
         //"sway/language",
@@ -154,10 +155,16 @@
     "memory": {
         "format": "{}% "
     },
-    "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
-    "critical-threshold": 80,
-    "format": "{temperatureC}°C {icon}",
+"temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "critical-threshold": 90,
+    "format": "CPU {temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+},
+"temperature#gpu": {
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+    "critical-threshold": 90,
+    "format": "GPU {temperatureC}°C {icon}",
     "format-icons": ["", "", ""]
 },
     "backlight": {

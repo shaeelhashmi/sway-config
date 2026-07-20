@@ -1,38 +1,53 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
+    color: #ffffff;
+        padding: 1px 5px;
+}
+#workspaces,
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#bluetooth,
+#custom-gpu0,
+#custom-gpu1,
+#custom-temps,
+#custom-power,
+#custom-media,
+#power-profiles-daemon,
+#mode,
+#scratchpad,
+#tray {
+    margin: 5px 0;
+    padding: 1px 5px;
 }
 #clock {
-    background-color: transparent;
-
-    padding: 1px 1px;
+   background-color: rgba(146, 146, 146, 0.753);
     color: #ffffff;
 }
 #custom-gpu0 {
     background-color: rgba(237, 28, 36, 0.75); /* AMD red */
     color: #ffffff;
-    margin: 5px 0;
-    padding: 1px 1px;
+
     border-radius: 3px;
 }
-
+#custom-temps {
+    background-color: rgba(146, 146, 146, 0.753);
+}
 #custom-gpu1 {
     background-color: rgba(0, 113, 197, 0.75); /* Intel blue */
-    color: #ffffff;
-    margin: 5px 0;
-    padding: 1px 1px;
     border-radius: 3px;
 }
 window#waybar {
     /* background-color: rgb(0, 5, 34);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    background: rgba(0, 0, 0, 0.151);;
-    margin-top: 5px;
-    color: #ffffff;
+    background: rgb(0, 33, 86);;
     transition-property: background-color;
     transition-duration: .5s;
-    padding:10px;
 
 }
 
@@ -49,19 +64,17 @@ window#waybar.solo {
 }
 */
 #bluetooth {
-    color: #89b4fa;
-    background-color: #313244;
-    border-radius: 8px;
-    padding: 0 8px;
-    margin: 4px 2px;
+    color: #ffffff;
+    background-color: #636bfa;
 }
 
 #bluetooth.connected {
-    color: #a6e3a1;
+    color: #ffffff;
 }
 
 #bluetooth.disabled {
-    color: #f38ba8;
+    color: #ffffff;
+    background-color: #b80707;
 }
 window#waybar.termite {
     background-color: #3F3F3F;
@@ -91,12 +104,10 @@ button:hover {
     background-color: rgba(146, 146, 146, 0.897);
 }
 
-#workspaces button {
-    padding: 0 10px;          /* more padding = easier to see */
+#workspaces button {        /* more padding = easier to see */
     background-color: rgba(100, 114, 125, 0.6);
     color: #ffffff;
     border-radius: 4px;
-    margin: 2px 2px;
 }
 
 
@@ -121,32 +132,6 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
-    margin:5px 0;
-     padding: 1px 1px;
-    color: #ffffff;
-    border-radius: 3px;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
-}
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -187,17 +172,11 @@ button:hover {
 }
 #custom-power {
     color: #ffffff;
-    padding: 0 10px;
-    margin: 4px 4px;
     border-radius: 8px;
     margin-right: 15px; /* FORCE right side spacing */
 
     margin-left: 15px; /* FORCE left side spacing */
 }
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
 #power-profiles-daemon.performance {
      background-color: rgb(241, 21, 21);
     color: #ffffff;

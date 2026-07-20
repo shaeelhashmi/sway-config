@@ -23,7 +23,8 @@ set $term foot
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-output * bg /home/shaeel/Pictures/wallpapers/viper.jpg fill
+
+output * bg /home/shaeel/Pictures/wallpapers/wallhaven-o529q9.png fill
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT
@@ -254,3 +255,5 @@ for_window [app_id=".*"] opacity 0.9
 bindsym $mod+equal exec swaymsg opacity plus 0.05
 bindsym $mod+shift+equal exec swaymsg opacity minus 0.05
 exec blueman-applet
+bindsym Mod1+Tab exec swaymsg -t get_tree | jq -r '..|objects|select(.type=="con" and .name!=null)|.name' | wofi --dmenu | xargs -I{} swaymsg '[title="{}"] focus'
+exec wl-paste --watch sh -c "DISPLAY=:0 xclip -selection clipboard -i"

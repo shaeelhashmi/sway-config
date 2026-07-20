@@ -27,8 +27,7 @@
         "custom/gpu0",
         "custom/gpu1",
         //"memory",
-        "temperature",
-        "temperature#gpu",
+       "custom/temps",
         //"backlight",
         //"keyboard-state",
         //"sway/language",
@@ -229,6 +228,11 @@
         },
         "on-click": "pavucontrol"
     },
+    "custom/temps": {
+    "exec": "~/.config/waybar/scripts/temps.sh",
+    "return-type": "json",
+    "interval": 5
+},
     
     "custom/media": {
         "format": "{icon} {text}",

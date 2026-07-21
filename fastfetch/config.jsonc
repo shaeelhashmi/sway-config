@@ -3,6 +3,9 @@
     "logo": {
         "type": "file",
         "source": "/home/shaeel/.config/fastfetch/cat.txt",
+        "color": {
+            "1": "#FF0909"
+        },
         "padding": {
             "right": 2
         }

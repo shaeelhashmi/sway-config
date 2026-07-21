@@ -18,7 +18,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term /home/shaeel/.local/bin/kitty
 # Your preferred application launcher
 ### Output configuration
 #

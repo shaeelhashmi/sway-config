@@ -3,7 +3,8 @@
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
     color: #ffffff;
-        padding: 1px 5px;
+    padding: 1px 5px;
+    border:none;
 }
 @import url("./CSS/Hello-kitty.css");
 #workspaces,
@@ -26,27 +27,55 @@
     margin: 5px 0;
     padding: 1px 5px;
 }
+/* in ~/.config/waybar/style.css */
+#waybar {
+    margin: 5px 5px;
+}
+#waybar .modules-left {
+      background-color: rgba(13, 15, 49, 0.687);
+    border-radius: 8px;
+    padding: 2px 8px;
+    margin: 5px;
+}
+
+#waybar .modules-center {
+    margin: 5px;
+    background-color: rgba(13, 15, 49, 0.687);
+    border-radius: 8px;
+    padding: 2px 8px;
+}
+ 
+#waybar .modules-right {
+    margin: 5px;
+    background-color: rgba(13, 15, 49, 0.687);
+    border-radius: 8px;
+    padding: 2px 2px;
+}
 #clock {
    /* background-color: rgba(146, 146, 146, 0.753); */
     color: #ffffff;
 }
-#custom-gpu0 {
-    background-color: rgba(237, 28, 36, 0.75); /* AMD red */
-    color: #ffffff;
+/* The main dropdown menu container */
 
+#custom-gpu0 {
+    /* background-color: rgba(237, 28, 36, 0.75);  AMD red */ 
+    color: #ffffff; 
     border-radius: 3px;
 }
 #custom-temps {
-    background-color: rgba(146, 146, 146, 0.753);
+    /* background-color: rgba(146, 146, 146, 0.753);
+} */
 }
 #custom-gpu1 {
-    background-color: rgba(0, 113, 197, 0.75); /* Intel blue */
+    /* background-color: rgba(0, 113, 197, 0.75); Intel blue */
     border-radius: 3px;
 }
+
 window#waybar {
+    background-color: transparent;
     /* background-color: rgb(0, 5, 34);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    background: rgb(0, 33, 86);;
+    /* background: rgb(0, 33, 86);; */
     transition-property: background-color;
     transition-duration: .5s;
 
@@ -66,7 +95,7 @@ window#waybar.solo {
 */
 #bluetooth {
     color: #ffffff;
-    background-color: #636bfa;
+    /* background-color: #636bfa; */
 }
 
 #bluetooth.connected {
@@ -75,14 +104,14 @@ window#waybar.solo {
 
 #bluetooth.disabled {
     color: #ffffff;
-    background-color: #b80707;
+    /* background-color: #b80707; */
 }
 window#waybar.termite {
-    background-color: #3F3F3F;
+    /* background-color: #3F3F3F; */
 }
 
 window#waybar.chromium {
-    background-color: #000000;
+    /* background-color: #000000; */
     border: none;
 }
 
@@ -94,6 +123,7 @@ button {
     border-radius: 0;
 }
 
+
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
@@ -102,11 +132,11 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: rgba(146, 146, 146, 0.897);
+    /* background-color: rgba(146, 146, 146, 0.897); */
 }
 
 #workspaces button {        /* more padding = easier to see */
-    background-color: rgba(100, 114, 125, 0.6);
+    /* background-color: rgba(100, 114, 125, 0.6); */
     color: #ffffff;
     border-radius: 4px;
 }
@@ -145,25 +175,25 @@ button:hover {
 }
 
 #battery {
-    background-color: rgba(146, 146, 146, 0.753);
-    color: #000000;
+    /* background-color: rgba(146, 146, 146, 0.753); */
+    color: #ffffff;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
+    /* background-color: #26A65B; */
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        /* background-color: #ffffff; */
+        color: #ffffff;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    /* background-color: #f53c3c; */
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -179,72 +209,74 @@ button:hover {
     margin-left: 15px; /* FORCE left side spacing */
 }
 #power-profiles-daemon.performance {
-     background-color: rgb(241, 21, 21);
+     /* background-color: rgb(241, 21, 21); */
     color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
     color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
+    /* background-color: #2ecc71; */
+    color: #ffffff;
 }
 
 label:focus {
-    background-color: #000000;
+    /* background-color: #000000;
+} */
 }
 
 #cpu {
-   background-color: rgba(146, 146, 146, 0.753);
-    color: #000000;
+   /* background-color: rgba(146, 146, 146, 0.753); */
+    color: #ffffff;
 }
 
 #memory {
-    background-color: #9b59b6;
+    /* background-color: #9b59b6; */
 }
 
 #disk {
-    background-color: #964B00;
+    /* background-color: #964B00; */
 }
 
 #backlight {
-    background-color: #90b1b1;
+    /* background-color: #90b1b1; */
 }
 
 #network {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    /* background-color: #f53c3c; */
 }
 
 #pulseaudio {
+
     transition-property: background-color, color;
     transition-duration: .5s;
-    background-color: rgba(146, 146, 146, 0.753);
-    color: #000000;
+    /* background-color: rgba(146, 146, 146, 0.753); */
+    color: #ffffff;
 }
 
 #pulseaudio.muted {
-    background-color: rgba(146, 146, 146, 0.753);
+    /* background-color: rgba(146, 146, 146, 0.753); */
     color: #2a5c45;
 }
 
 #wireplumber {
-    background-color: rgba(146, 146, 146, 0.753);
+    /* background-color: rgba(146, 146, 146, 0.753); */
     color: #000000;
 }
 
 #wireplumber.muted {
-    background-color: rgba(146, 146, 146, 0.753);
+    /* background-color: rgba(146, 146, 146, 0.753); */
 }
 
 #custom-media {
-    background-color: #66cc99;
+    /* background-color: #66cc99; */
     color: #2a5c45;
     min-width: 100px;
 }

@@ -9,9 +9,7 @@
 # Logo key. Use Mod1 for Alt.
 
 set $mod Mod4
-gaps inner 10
-gaps outer 5
-default_border pixel 2
+
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -23,7 +21,6 @@ set $term /home/shaeel/.local/bin/kitty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-
 output * bg /home/shaeel/Pictures/wallpapers/wallhaven-o529q9.png fill
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -251,7 +248,8 @@ exec ~/.config/waybar/scripts/video-frame.sh
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 
 # Transparency for all windows
-for_window [app_id=".*"] opacity 0.9
+for_window [app_id=".*"] opacity 0.75
+blur enable
 # Increase/ Decrease transparency
 bindsym $mod+equal exec swaymsg opacity plus 0.05
 bindsym $mod+shift+equal exec swaymsg opacity minus 0.05

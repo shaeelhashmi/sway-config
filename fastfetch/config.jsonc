@@ -4,7 +4,7 @@
         "type": "file",
         "source": "/home/shaeel/.config/fastfetch/cat2.txt",
         "color": {
-            "1": "#FF0909"
+            "1": "#ff16b0"
         },
         "padding": {
             "right": 2

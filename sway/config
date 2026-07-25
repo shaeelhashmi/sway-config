@@ -246,6 +246,7 @@ include /usr/local/etc/sway/config.d/*
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 xwayland enable
 exec /bin/sh -c 'while [ ! -S "$SWAYSOCK" ]; do sleep 0.1; done; waybar'
+exec ~/.config/waybar/scripts/video-frame.sh
 
 exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 
@@ -257,3 +258,4 @@ bindsym $mod+shift+equal exec swaymsg opacity minus 0.05
 exec blueman-applet
 bindsym Mod1+Tab exec swaymsg -t get_tree | jq -r '..|objects|select(.type=="con" and .name!=null)|.name' | wofi --dmenu | xargs -I{} swaymsg '[title="{}"] focus'
 exec wl-paste --watch sh -c "DISPLAY=:0 xclip -selection clipboard -i"
+for_window [title="Counter-Strike 2"] fullscreen enable

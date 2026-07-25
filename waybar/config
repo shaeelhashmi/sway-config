@@ -1,5 +1,6 @@
 // -*- mode: jsonc -*-
 {
+    "reload_style_on_change": true,
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     //"height": 60, // Waybar height (to be removed for auto height)
@@ -11,10 +12,13 @@
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
-        "custom/media"
+        "custom/media",
+        "custom/hello-kitty"
     ],
+
     "modules-center": [
-    "sway/window"
+    // "sway/window"
+    "clock"
     ],
     "modules-right": [
         // "mpd",
@@ -33,7 +37,7 @@
         //"sway/language",
         "battery",
         //"battery#bat2",
-        "clock",
+        
         //"tray"
         "custom/power"
     ],
@@ -65,6 +69,12 @@
     "on-click": "blueman-manager",
     "on-click-right": "bluetoothctl power off"
 },
+  "custom/hello-kitty": {
+    "exec": "echo '.'",
+    "interval": 0,
+    "format": "{}",
+    "tooltip": false
+  },
 "custom/gpu0": {
     "exec": "radeontop -d - -l 1 2>/dev/null | grep -oP '(?<=gpu )\\d+\\.\\d+' | awk '{printf \"%d%%\", $1}'",
     "format": "AMD {}  ",
@@ -255,7 +265,8 @@
 			"shutdown": "shutdown",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
+			"hibernate": "systemctl hibernate",
+            "logout": "swaymsg exit"
 		}
     }
 }

@@ -1,0 +1,8 @@
+#custom-hello-kitty {
+  min-width: 24px;
+  min-height: 24px;
+  background-image: url("file:///home/shaeel/.config/waybar/frames/frame_009.png?ts=1784999016685254045");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

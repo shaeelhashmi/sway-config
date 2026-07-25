@@ -5,6 +5,7 @@
     color: #ffffff;
         padding: 1px 5px;
 }
+@import url("./CSS/Hello-kitty.css");
 #workspaces,
 #clock,
 #battery,
@@ -26,7 +27,7 @@
     padding: 1px 5px;
 }
 #clock {
-   background-color: rgba(146, 146, 146, 0.753);
+   /* background-color: rgba(146, 146, 146, 0.753); */
     color: #ffffff;
 }
 #custom-gpu0 {

@@ -21,7 +21,7 @@ set $term /home/shaeel/.local/bin/kitty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-output * bg /home/shaeel/Pictures/wallpapers/wallhaven-o529q9.png fill
+output * bg /home/shaeel/Pictures/wallpapers/147.jpg fill
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT
@@ -253,3 +253,7 @@ for_window [title="Counter-Strike 2"] fullscreen enable
 bindsym $mod+shift+t exec swaymsg -t get_tree | jq -r '..|objects|select(.type=="con" or .type=="floating_con")|select(.pid!=null)|.id' | xargs -I{} swaymsg '[con_id={}] floating disable'
 # Enable Float all
 bindsym $mod+shift+y exec swaymsg -t get_tree | jq -r '..|objects|select(.type=="con" or .type=="floating_con")|select(.pid!=null)|.id' | xargs -I{} swaymsg '[con_id={}] floating enable'
+gaps left 40
+gaps right 40
+gaps top 20
+gaps bottom 20

@@ -75,7 +75,13 @@ format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 style = "fg:#e3e5e5 bg:#911700"
 format = "[ $symbol ]($style)"
 disabled = false
-
+[python]
+# Example: Displays 'via 🐍 v3.9.7 (myenv)'
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\)) ]($style)'
+style = "bold yellow"
+symbol = "🐍 "
+pyenv_version_name = true
+pyenv_prefix = "venv "
 [os.symbols]
 Windows = "󰍲"
 Ubuntu = "󰕈"

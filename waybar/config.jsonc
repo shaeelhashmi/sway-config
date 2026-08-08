@@ -13,7 +13,8 @@
         "sway/mode",
         "sway/scratchpad",
         "custom/media",
-        "custom/hello-kitty"
+        "custom/hello-kitty",
+        "tray"
     ],
 
     "modules-center": [
@@ -235,8 +236,7 @@
             "portable": "",
             "car": "",
             "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+        }
     },
     "custom/temps": {
     "exec": "~/.config/waybar/scripts/temps.sh",

@@ -23,17 +23,11 @@
         "de",
         "wm",
         "theme",
-        "icons",
-        "cursor",
-        "terminal",
-        "terminalfont",
         "cpu",
         "gpu",
         "memory",
         "swap",
         "disk",
-        "localip",
         "battery",
-        "locale"
     ]
 }

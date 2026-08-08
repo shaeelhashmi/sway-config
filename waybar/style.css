@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+     font-family: "Bitcount Prop Single","FontAwesome";
     font-size: 12px;
     color: #ffffff;
     padding: 1px 5px;
@@ -254,7 +254,7 @@ label:focus {
 }
 
 #pulseaudio {
-
+    
     transition-property: background-color, color;
     transition-duration: .5s;
     /* background-color: rgba(146, 146, 146, 0.753); */

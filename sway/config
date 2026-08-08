@@ -21,7 +21,7 @@ set $term /home/shaeel/.local/bin/kitty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-output * bg /home/shaeel/Pictures/wallpapers/wallhaven-o529q9.png fill
+output * bg ~/.config/sway/wallpapers/147.jpg fill
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT

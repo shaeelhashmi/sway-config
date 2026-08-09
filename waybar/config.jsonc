@@ -22,9 +22,9 @@
     "clock"
     ],
     "modules-right": [
-        // "mpd",
+         "mpd",
         //"idle_inhibitor",
-        "bluetooth",
+        //"bluetooth",
         "pulseaudio",
         "network",
         "power-profiles-daemon",

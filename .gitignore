@@ -18,5 +18,6 @@
 !kitty
 !kitty/**
 !starship.toml
-!Scripts
+!Scripts/
+!Scripts/**
 waybar/CSS/Hello-kitty.css

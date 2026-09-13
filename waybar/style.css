@@ -32,7 +32,7 @@
     margin: 5px 5px;
 }
 #waybar .modules-left {
-      background-color: rgba(13, 15, 49, 0.687);
+      background-color: rgba(22, 0, 43, 0.687);
     border-radius: 8px;
     padding: 2px 8px;
     margin: 5px;
@@ -40,14 +40,14 @@
 
 #waybar .modules-center {
     margin: 5px;
-    background-color: rgba(13, 15, 49, 0.687);
+    background-color: rgba(22, 0, 43, 0.687);
     border-radius: 8px;
     padding: 2px 8px;
 }
  
 #waybar .modules-right {
     margin: 5px;
-    background-color: rgba(13, 15, 49, 0.687);
+    background-color: rgba(22, 0, 43, 0.687);
     border-radius: 8px;
     padding: 2px 2px;
 }

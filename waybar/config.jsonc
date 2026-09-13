@@ -22,7 +22,7 @@
     "clock"
     ],
     "modules-right": [
-         "mpd",
+        //"mpd",
         //"idle_inhibitor",
         //"bluetooth",
         "pulseaudio",
@@ -31,15 +31,15 @@
         "cpu",
         "custom/gpu0",
         "custom/gpu1",
-        //"memory",
+        "memory",
        "custom/temps",
         //"backlight",
         //"keyboard-state",
         //"sway/language",
-        "battery",
+        //"battery",
         //"battery#bat2",
         
-        //"tray"
+        //"tray",
         "custom/power"
     ],
     // Modules configuration
@@ -77,7 +77,7 @@
     "tooltip": false
   },
 "custom/gpu0": {
-    "exec": "radeontop -d - -l 1 2>/dev/null | grep -oP '(?<=gpu )\\d+\\.\\d+' | awk '{printf \"%d%%\", $1}'",
+    "exec": "sudo radeontop -d - -l 1 2>/dev/null | grep -oP '(?<=gpu )\\d+\\.\\d+' | awk '{printf \"%d%%\", $1}'",
     "format": "AMD {}  ",
     "interval": 3,
     "tooltip": false

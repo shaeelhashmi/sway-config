@@ -1,10 +1,10 @@
 :root {
-  --cc-bg: rgba(0, 1, 21, 0.7);
+  --cc-bg: rgba(9, 0, 18, 0.687);
   --noti-border-color: rgba(0, 0, 0, 0.15);
-  --noti-bg: 0, 1, 21;
+  --noti-bg: 9, 0, 18;
   --noti-bg-alpha: 0.8;
   --noti-bg-darker: rgb(38, 38, 38);
-  --noti-bg-hover: rgb(0, 1, 21);
+  --noti-bg-hover: rgb(4, 0, 8);
   --noti-bg-focus: rgba(46, 46, 56, 0.6);
   --noti-close-bg: rgb(78, 78, 78);
   --noti-close-bg-hover: rgb(94, 94, 94);

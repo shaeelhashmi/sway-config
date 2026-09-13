@@ -11,8 +11,6 @@
 !waybar/**
 !swaync/
 !swaync/**
-!foot
-!foot/**
 !fastfetch
 !fastfetch/**
 !kitty

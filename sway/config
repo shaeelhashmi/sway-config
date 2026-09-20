@@ -258,3 +258,6 @@ gaps left 60
 gaps right 60
 gaps top 20
 gaps bottom 50
+# Workspace animation
+animation_duration_ms 400
+

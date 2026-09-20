@@ -228,7 +228,8 @@ bindsym $mod+shift+Return exec wofi --show drun
      bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Screenshots
-
+    bindsym R+Print exec ~/.config/Scripts/screen_record.sh
+    bindsym $mod+delete exec pkill --signal SIGINT wf-recorder || ~/.config/Scripts/screen_record.sh
     bindsym Print exec ~/.local/bin/screenshot.sh
 
     bindsym $mod+Print    exec ~/.local/bin/screenshot.sh region

@@ -4,11 +4,12 @@
         "type": "file",
         "source": "/home/shaeel/.config/fastfetch/cat.txt",
         "color": {
-            "1": "#ff16b0"
+            "1": "#edc768",
         },
         "padding": {
             "right": 2
-        }
+        },
+        
     },
     "modules": [
         "title",

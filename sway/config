@@ -7,7 +7,6 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-blur enable
 set $mod Mod1
 
 # Home row direction keys, like vim
@@ -21,7 +20,7 @@ set $term /home/shaeel/.local/bin/kitty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-output * bg ~/.config/sway/wallpapers/lavender-fields-3840x2160-21314.jpg fill
+output * bg ~/.config/sway/wallpapers/download.png fill
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT
@@ -176,6 +175,13 @@ set $ELECTRON_OZONE_PLATFORM_HINT auto
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+#
+# Focused Unfocused windows
+#    
+client.focused #313130 #b5b53675  #000000 #31313030 #313130
+client.unfocused #313130 #31313075 #000000 #31313030 #313130
+
 #
 # Scratchpad:
 #
@@ -218,6 +224,7 @@ bindsym $mod+shift+Return exec wofi --show drun
 # Utilities:
 #
     # Special keys to adjust volume via PulseAudio
+
     bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
     bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
     bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%

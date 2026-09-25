@@ -1,9 +1,11 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](bg:#3ba55c fg:#a3aed2)\
+[](bg:#B03800 fg:#a3aed2)\
 $os\
-[](bg:#911700 fg:#a3aed2)\
+[](bg:#B03800 fg:#a3aed2)\
+$python\
+[](bg:#3ba55c fg:#a3aed2)\
 $directory\
 [](fg:#911700 bg:#394260)\
 $git_branch\
@@ -20,7 +22,7 @@ $time\
 \n$character"""
 
 [directory]
-style = "fg:#e3e5e5 bg:#911700"
+style = "fg:#e3e5e5 bg:#844D01"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -72,16 +74,14 @@ style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 
 [os]
-style = "fg:#e3e5e5 bg:#911700"
+style = "fg:#e3e5e5 bg:#B03800"
 format = "[ $symbol ]($style)"
 disabled = false
 [python]
-# Example: Displays 'via 🐍 v3.9.7 (myenv)'
-format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\)) ]($style)'
-style = "bold yellow"
+format = '[ $virtualenv$symbol ]($style)'
+style = "bg:#6A5403"
 symbol = "🐍 "
-pyenv_version_name = true
-pyenv_prefix = "venv "
+
 [os.symbols]
 Windows = "󰍲"
 Ubuntu = "󰕈"

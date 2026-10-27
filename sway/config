@@ -27,7 +27,9 @@ exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT
 exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY DISPLAY
 exec dbus-update-activation-environment --systemd SWAYSOCK WAYLAND_DISPLAY DISPLAY
 exec dbus-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec wl-paste --watch true
 exec_always swaync
+exec /home/shaeel/.cargo/bin/xwayland-satellite :0
 bindsym $mod+n exec swaync-client -t
 set $ELECTRON_OZONE_PLATFORM_HINT auto
 #
@@ -246,7 +248,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 # Read `man 5 sway-bar` for more information about this section.
 
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-xwayland enabled
+xwayland enable
 include /usr/local/etc/sway/config.d/*
 exec /bin/sh -c 'while [ ! -S "$SWAYSOCK" ]; do sleep 0.1; done; waybar'
 exec ~/.config/waybar/scripts/video-frame.sh

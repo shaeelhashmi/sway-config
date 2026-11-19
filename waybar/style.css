@@ -28,11 +28,14 @@
     padding: 1px 5px;
 }
 /* in ~/.config/waybar/style.css */
-#waybar {
-    margin: 5px 5px;
+window#waybar {
+    background-color: rgba(49, 49, 48, 0.687);
+    border-radius: 8px;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 #waybar .modules-left {
-    background-color: rgba(49, 49, 48, 0.687);
+    background-color: rgba(1, 0, 42, 0.687);
     border-radius: 8px;
     padding: 2px 8px;
     margin: 5px;
@@ -40,14 +43,14 @@
 
 #waybar .modules-center {
     margin: 5px;
-    background-color: rgba(49, 49, 48, 0.687);
+    background-color: rgba(1, 0, 42, 0.687);
     border-radius: 8px;
     padding: 2px 8px;
 }
  
 #waybar .modules-right {
     margin: 5px;
-    background-color: rgba(49, 49, 48, 0.687);
+    background-color: rgba(1, 0, 42, 0.687);
     border-radius: 8px;
     padding: 2px 2px;
 }
@@ -128,9 +131,6 @@ button:hover {
 }
 
 /* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    /* background-color: rgba(146, 146, 146, 0.897); */
-}
 
 #workspaces button {        /* more padding = easier to see */
     /* background-color: rgba(100, 114, 125, 0.6); */
@@ -171,15 +171,6 @@ button:hover {
     margin-right: 0;
 }
 
-#battery {
-    /* background-color: rgba(146, 146, 146, 0.753); */
-    color: #ffffff;
-}
-
-#battery.charging, #battery.plugged {
-    color: #ffffff;
-    /* background-color: #26A65B; */
-}
 
 @keyframes blink {
     to {

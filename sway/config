@@ -20,7 +20,7 @@ set $term /home/shaeel/.local/bin/kitty
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
-output * bg ~/.config/sway/wallpapers/idk.jpg fit #3D3E53
+output * bg ~/.config/sway/wallpapers/girl-right.webp fit #c6c4c4
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user import-environment ELECTRON_OZONE_PLATFORM_HINT
@@ -181,8 +181,8 @@ set $ELECTRON_OZONE_PLATFORM_HINT auto
 #
 # Focused Unfocused windows
 #    
-client.focused #313130 #001554a1  #ffffff #31313030 #313130
-client.unfocused #313130 #31313075 #ffffff #31313030 #313130
+client.focused #3e003e #52005400  #ffffff #3e003e #3e003e
+client.unfocused #313130 #31313075 #ffffff #3e003e #3e003e
 
 #
 # Scratchpad:

@@ -29,13 +29,13 @@
 }
 /* in ~/.config/waybar/style.css */
 window#waybar {
-    background-color: rgba(49, 49, 48, 0.687);
+    background-color: rgba(64, 0, 64, 0.687);
     border-radius: 8px;
     transition-property: background-color;
     transition-duration: .5s;
 }
 #waybar .modules-left {
-    background-color: rgba(1, 0, 42, 0.687);
+    background-color: rgba(64, 0, 64, 0.421);
     border-radius: 8px;
     padding: 2px 8px;
     margin: 5px;
@@ -43,14 +43,14 @@ window#waybar {
 
 #waybar .modules-center {
     margin: 5px;
-    background-color: rgba(1, 0, 42, 0.687);
+     background-color: rgba(64, 0, 64, 0.421);
     border-radius: 8px;
     padding: 2px 8px;
 }
  
 #waybar .modules-right {
     margin: 5px;
-    background-color: rgba(1, 0, 42, 0.687);
+    background-color: rgba(64, 0, 64, 0.421);
     border-radius: 8px;
     padding: 2px 2px;
 }
